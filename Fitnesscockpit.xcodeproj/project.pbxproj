@@ -13,6 +13,8 @@
 		BF09788A294E17FB006B3FC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF097889294E17FB006B3FC7 /* Preview Assets.xcassets */; };
 		BF09788C294E17FB006B3FC7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF09788B294E17FB006B3FC7 /* Persistence.swift */; };
 		BF09788F294E17FB006B3FC7 /* Fitnesscockpit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF09788D294E17FB006B3FC7 /* Fitnesscockpit.xcdatamodeld */; };
+		BF097896294E19D9006B3FC7 /* CreateActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF097895294E19D9006B3FC7 /* CreateActivityView.swift */; };
+		BF097898294E1C9C006B3FC7 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF097897294E1C9C006B3FC7 /* ActivityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		BF097889294E17FB006B3FC7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BF09788B294E17FB006B3FC7 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		BF09788E294E17FB006B3FC7 /* Fitnesscockpit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fitnesscockpit.xcdatamodel; sourceTree = "<group>"; };
+		BF097895294E19D9006B3FC7 /* CreateActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateActivityView.swift; sourceTree = "<group>"; };
+		BF097897294E1C9C006B3FC7 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				BF09788B294E17FB006B3FC7 /* Persistence.swift */,
 				BF09788D294E17FB006B3FC7 /* Fitnesscockpit.xcdatamodeld */,
 				BF097888294E17FB006B3FC7 /* Preview Content */,
+				BF097895294E19D9006B3FC7 /* CreateActivityView.swift */,
+				BF097897294E1C9C006B3FC7 /* ActivityView.swift */,
 			);
 			path = Fitnesscockpit;
 			sourceTree = "<group>";
@@ -145,8 +151,10 @@
 			files = (
 				BF09788F294E17FB006B3FC7 /* Fitnesscockpit.xcdatamodeld in Sources */,
 				BF09788C294E17FB006B3FC7 /* Persistence.swift in Sources */,
+				BF097896294E19D9006B3FC7 /* CreateActivityView.swift in Sources */,
 				BF097885294E17F9006B3FC7 /* ContentView.swift in Sources */,
 				BF097883294E17F9006B3FC7 /* FitnesscockpitApp.swift in Sources */,
+				BF097898294E1C9C006B3FC7 /* ActivityView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
