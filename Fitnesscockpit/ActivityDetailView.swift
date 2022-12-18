@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ActivityView: View {
+struct ActivityDetailView: View {
     @Environment(\.managedObjectContext) private var context
     @Environment(\.presentationMode) var presentationMode
     

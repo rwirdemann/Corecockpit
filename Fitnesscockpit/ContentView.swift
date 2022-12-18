@@ -21,7 +21,7 @@ struct ContentView: View {
             List {
                 ForEach(items) { item in
                     NavigationLink {
-                        ActivityView(activity: item)
+                        ActivityDetailView(activity: item)
                     } label: {
                         Text("\(item.name!)")
                     }
