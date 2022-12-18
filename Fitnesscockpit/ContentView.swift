@@ -23,7 +23,14 @@ struct ContentView: View {
                     NavigationLink {
                         ActivityDetailView(activity: item)
                     } label: {
-                        Text("\(item.name!)")
+                        VStack(alignment: .leading, spacing: 5) {
+                            Text("\(item.name!) (\(item.repititions ?? ""))")
+                                .fontWeight(.semibold)
+                                .foregroundColor(.primary)
+                            Text("\(item.phase!) - \(item.bodyPart!)")
+                                .font(.footnote)
+                                .foregroundColor(.secondary)
+                        }
                     }
                 }
                 .onDelete(perform: deleteItems)

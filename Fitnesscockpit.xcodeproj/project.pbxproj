@@ -15,6 +15,7 @@
 		BF09788F294E17FB006B3FC7 /* Fitnesscockpit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF09788D294E17FB006B3FC7 /* Fitnesscockpit.xcdatamodeld */; };
 		BF097896294E19D9006B3FC7 /* CreateActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF097895294E19D9006B3FC7 /* CreateActivityView.swift */; };
 		BF097898294E1C9C006B3FC7 /* ActivityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF097897294E1C9C006B3FC7 /* ActivityDetailView.swift */; };
+		BF1AA9DD294F4C13008BC2AB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1AA9DC294F4C13008BC2AB /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		BF09788E294E17FB006B3FC7 /* Fitnesscockpit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fitnesscockpit.xcdatamodel; sourceTree = "<group>"; };
 		BF097895294E19D9006B3FC7 /* CreateActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateActivityView.swift; sourceTree = "<group>"; };
 		BF097897294E1C9C006B3FC7 /* ActivityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailView.swift; sourceTree = "<group>"; };
+		BF1AA9DC294F4C13008BC2AB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				BF097888294E17FB006B3FC7 /* Preview Content */,
 				BF097895294E19D9006B3FC7 /* CreateActivityView.swift */,
 				BF097897294E1C9C006B3FC7 /* ActivityDetailView.swift */,
+				BF1AA9DC294F4C13008BC2AB /* Constants.swift */,
 			);
 			path = Fitnesscockpit;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				BF09788C294E17FB006B3FC7 /* Persistence.swift in Sources */,
 				BF097896294E19D9006B3FC7 /* CreateActivityView.swift in Sources */,
 				BF097885294E17F9006B3FC7 /* ContentView.swift in Sources */,
+				BF1AA9DD294F4C13008BC2AB /* Constants.swift in Sources */,
 				BF097883294E17F9006B3FC7 /* FitnesscockpitApp.swift in Sources */,
 				BF097898294E1C9C006B3FC7 /* ActivityDetailView.swift in Sources */,
 			);
