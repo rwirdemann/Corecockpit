@@ -12,6 +12,7 @@ struct CreateActivityView: View {
     @Environment(\.presentationMode) var presentationMode
 
     @State private var name = ""
+    @State private var desc = ""
     @State private var phase = Constants.PHASES[0]
     @State private var bodyPart = Constants.BODY_PARTS[0]
     @State private var repititions = Constants.REPITITIONS[0]
@@ -40,6 +41,7 @@ struct CreateActivityView: View {
                     Text($0)
                 }
             }
+            TextEditor(text: $desc)
         }
         .toolbar{
             ToolbarItemGroup(placement: .navigationBarTrailing) {
@@ -56,6 +58,7 @@ struct CreateActivityView: View {
         activity.repititions = repititions
         activity.rubber = rubber
         activity.bodyPart = bodyPart
+        activity.desc = desc
         do {
             try context.save()
         } catch {

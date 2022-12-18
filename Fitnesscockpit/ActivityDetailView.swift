@@ -1,5 +1,5 @@
 //
-//  EditActivityView.swift
+//  ActivityDetailView.swift
 //  Fitnesscockpit
 //
 //  Created by Ralf Wirdemann on 17.12.22.
@@ -47,6 +47,10 @@ struct ActivityDetailView: View {
                         }
                     }
                 }
+                if let desc = Binding<String>($activity.desc) {
+                    TextEditor(text: desc)
+                }
+
             }
         }
         .toolbar{
