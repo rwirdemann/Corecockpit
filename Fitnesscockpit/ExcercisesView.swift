@@ -59,7 +59,8 @@ struct ExcercisesView: View {
 
 private let itemFormatter: DateFormatter = {
     let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
+    formatter.locale = Locale(identifier: "de")
+    formatter.dateFormat = "EEEE, d. MMM y, HH:mm"
+    formatter.locale = Locale(identifier: "de")
     return formatter
 }()

@@ -24,10 +24,10 @@ struct CreateExcerciseView: View {
         animation: .default)
     private var workouts: FetchedResults<Activity>
 
+    @State private var date = Date()
     @State private var warmup1: Activity?
     @State private var warmup2: Activity?
     @State private var warmup3: Activity?
-
     @State private var workout1: Activity?
     @State private var workout2: Activity?
     @State private var workout3: Activity?
@@ -49,6 +49,13 @@ struct CreateExcerciseView: View {
     
     var body: some View {
         Form {
+            HStack {
+                Text("When")
+                Spacer()
+                DatePicker("", selection: $date, displayedComponents: .date)
+                    .environment(\.locale, Locale.init(identifier: "de_DE"))
+            }
+
             Section(header: Text("Warmup")) {
                 activityPicker(activity: $warmup1, activities: warmups)
                 activityPicker(activity: $warmup2, activities: warmups)
@@ -72,7 +79,7 @@ struct CreateExcerciseView: View {
     
     private func save() {
         let excercise = Excercise(context: context)
-        excercise.when = Date()
+        excercise.when = date
         guard let w1 = warmup1 else {
             return
         }

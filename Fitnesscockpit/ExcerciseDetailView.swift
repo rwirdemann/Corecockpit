@@ -12,6 +12,7 @@ struct ExcerciseDetailView: View {
     
     var body: some View {
         Form {
+            Text(excercise.when!, formatter: itemFormatter)
             Section(header: Text("Warmup")) {
                 List {
                     ForEach(excercise.warmups.array(of: Activity.self)) { w in
@@ -58,3 +59,11 @@ extension Optional where Wrapped == NSSet {
         return [T]()
     }
 }
+
+private let itemFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.locale = Locale(identifier: "de")
+    formatter.dateFormat = "EEEE, d. MMM y"
+    formatter.locale = Locale(identifier: "de")
+    return formatter
+}()
