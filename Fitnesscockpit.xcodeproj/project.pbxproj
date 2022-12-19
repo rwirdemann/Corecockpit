@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BF097883294E17F9006B3FC7 /* FitnesscockpitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF097882294E17F9006B3FC7 /* FitnesscockpitApp.swift */; };
-		BF097885294E17F9006B3FC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF097884294E17F9006B3FC7 /* ContentView.swift */; };
+		BF097885294E17F9006B3FC7 /* ActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF097884294E17F9006B3FC7 /* ActivitiesView.swift */; };
 		BF097887294E17FB006B3FC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF097886294E17FB006B3FC7 /* Assets.xcassets */; };
 		BF09788A294E17FB006B3FC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF097889294E17FB006B3FC7 /* Preview Assets.xcassets */; };
 		BF09788C294E17FB006B3FC7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF09788B294E17FB006B3FC7 /* Persistence.swift */; };
@@ -16,12 +16,16 @@
 		BF097896294E19D9006B3FC7 /* CreateActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF097895294E19D9006B3FC7 /* CreateActivityView.swift */; };
 		BF097898294E1C9C006B3FC7 /* ActivityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF097897294E1C9C006B3FC7 /* ActivityDetailView.swift */; };
 		BF1AA9DD294F4C13008BC2AB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1AA9DC294F4C13008BC2AB /* Constants.swift */; };
+		BF1AA9DF294F9314008BC2AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1AA9DE294F9314008BC2AB /* ContentView.swift */; };
+		BF1AA9E1294F9561008BC2AB /* ExcercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1AA9E0294F9561008BC2AB /* ExcercisesView.swift */; };
+		BF5A6C1E295058DC00199565 /* ExcerciseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A6C1D295058DC00199565 /* ExcerciseDetailView.swift */; };
+		BF671175294FC0E20037A633 /* CreateExcerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF671174294FC0E20037A633 /* CreateExcerciseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BF09787F294E17F9006B3FC7 /* Fitnesscockpit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitnesscockpit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF097882294E17F9006B3FC7 /* FitnesscockpitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnesscockpitApp.swift; sourceTree = "<group>"; };
-		BF097884294E17F9006B3FC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BF097884294E17F9006B3FC7 /* ActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
 		BF097886294E17FB006B3FC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF097889294E17FB006B3FC7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BF09788B294E17FB006B3FC7 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -29,6 +33,10 @@
 		BF097895294E19D9006B3FC7 /* CreateActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateActivityView.swift; sourceTree = "<group>"; };
 		BF097897294E1C9C006B3FC7 /* ActivityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailView.swift; sourceTree = "<group>"; };
 		BF1AA9DC294F4C13008BC2AB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BF1AA9DE294F9314008BC2AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BF1AA9E0294F9561008BC2AB /* ExcercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcercisesView.swift; sourceTree = "<group>"; };
+		BF5A6C1D295058DC00199565 /* ExcerciseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseDetailView.swift; sourceTree = "<group>"; };
+		BF671174294FC0E20037A633 /* CreateExcerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateExcerciseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +69,9 @@
 		BF097881294E17F9006B3FC7 /* Fitnesscockpit */ = {
 			isa = PBXGroup;
 			children = (
+				BF1AA9E0294F9561008BC2AB /* ExcercisesView.swift */,
 				BF097882294E17F9006B3FC7 /* FitnesscockpitApp.swift */,
-				BF097884294E17F9006B3FC7 /* ContentView.swift */,
+				BF097884294E17F9006B3FC7 /* ActivitiesView.swift */,
 				BF097886294E17FB006B3FC7 /* Assets.xcassets */,
 				BF09788B294E17FB006B3FC7 /* Persistence.swift */,
 				BF09788D294E17FB006B3FC7 /* Fitnesscockpit.xcdatamodeld */,
@@ -70,6 +79,9 @@
 				BF097895294E19D9006B3FC7 /* CreateActivityView.swift */,
 				BF097897294E1C9C006B3FC7 /* ActivityDetailView.swift */,
 				BF1AA9DC294F4C13008BC2AB /* Constants.swift */,
+				BF1AA9DE294F9314008BC2AB /* ContentView.swift */,
+				BF671174294FC0E20037A633 /* CreateExcerciseView.swift */,
+				BF5A6C1D295058DC00199565 /* ExcerciseDetailView.swift */,
 			);
 			path = Fitnesscockpit;
 			sourceTree = "<group>";
@@ -154,10 +166,14 @@
 			files = (
 				BF09788F294E17FB006B3FC7 /* Fitnesscockpit.xcdatamodeld in Sources */,
 				BF09788C294E17FB006B3FC7 /* Persistence.swift in Sources */,
+				BF671175294FC0E20037A633 /* CreateExcerciseView.swift in Sources */,
+				BF1AA9DF294F9314008BC2AB /* ContentView.swift in Sources */,
 				BF097896294E19D9006B3FC7 /* CreateActivityView.swift in Sources */,
-				BF097885294E17F9006B3FC7 /* ContentView.swift in Sources */,
+				BF097885294E17F9006B3FC7 /* ActivitiesView.swift in Sources */,
+				BF1AA9E1294F9561008BC2AB /* ExcercisesView.swift in Sources */,
 				BF1AA9DD294F4C13008BC2AB /* Constants.swift in Sources */,
 				BF097883294E17F9006B3FC7 /* FitnesscockpitApp.swift in Sources */,
+				BF5A6C1E295058DC00199565 /* ExcerciseDetailView.swift in Sources */,
 				BF097898294E1C9C006B3FC7 /* ActivityDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,5 +7,12 @@
         <attribute name="phase" optional="YES" attributeType="String"/>
         <attribute name="repititions" optional="YES" attributeType="String"/>
         <attribute name="rubber" optional="YES" attributeType="String"/>
+        <relationship name="warmup" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Excercise" inverseName="warmups" inverseEntity="Excercise"/>
+        <relationship name="workout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Excercise" inverseName="workouts" inverseEntity="Excercise"/>
+    </entity>
+    <entity name="Excercise" representedClassName="Excercise" syncable="YES" codeGenerationType="class">
+        <attribute name="when" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="warmups" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activity" inverseName="warmup" inverseEntity="Activity"/>
+        <relationship name="workouts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activity" inverseName="workout" inverseEntity="Activity"/>
     </entity>
 </model>
