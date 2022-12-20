@@ -12,14 +12,16 @@ struct ActivitiesView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Activity.name, ascending: true)],
+        sortDescriptors:
+            [NSSortDescriptor(keyPath: \Activity.phase, ascending: true),
+             NSSortDescriptor(keyPath: \Activity.name, ascending: false)],
         animation: .default)
-    private var items: FetchedResults<Activity>
-
+    private var warmups: FetchedResults<Activity>
+    
     var body: some View {
         NavigationView {
             List {
-                ForEach(items) { item in
+                ForEach(warmups) { item in
                     NavigationLink {
                         ActivityDetailView(activity: item)
                     } label: {
@@ -45,13 +47,12 @@ struct ActivitiesView: View {
                                    label: {Image(systemName: "plus")})
                 }
             }
-            Text("Select an item")
         }
     }
 
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
+            offsets.map { warmups[$0] }.forEach(viewContext.delete)
 
             do {
                 try viewContext.save()
