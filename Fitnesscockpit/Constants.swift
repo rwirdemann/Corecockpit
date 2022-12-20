@@ -6,7 +6,9 @@
 //
 
 struct Constants {
-    static let PHASES = ["Warmup", "Workout"]
+    static let WORKOUT = "Workout"
+    static let WARMUP = "Warmup"
+    static let PHASES = [WARMUP, WORKOUT]
     
     static let CORE = "Core"
     static let BACK = "Back"

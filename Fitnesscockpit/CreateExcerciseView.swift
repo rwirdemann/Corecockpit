@@ -13,7 +13,7 @@ struct CreateExcerciseView: View {
     @Environment(\.presentationMode) var presentationMode
     
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Activity.name, ascending: false)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \Activity.name, ascending: true)],
         predicate: NSPredicate(format: "phase == 'Warmup'"),
         animation: .default)
     private var warmups: FetchedResults<Activity>
@@ -107,15 +107,27 @@ struct CreateExcerciseView: View {
         guard let wout6 = workout6 else {
             return
         }
-        excercise.addToWarmups([w1, w2, w3])
-        excercise.addToWorkouts([wout1, wout2, wout3, wout4, wout5, wout6])
+
+        excercise.addToAssignments([
+            createAssignment(context: context, order: 1, activity: w1),
+            createAssignment(context: context, order: 2, activity: w2),
+            createAssignment(context: context, order: 3, activity: w3),
+            createAssignment(context: context, order: 1, activity: wout1),
+            createAssignment(context: context, order: 2, activity: wout2),
+            createAssignment(context: context, order: 3, activity: wout3),
+            createAssignment(context: context, order: 4, activity: wout4),
+            createAssignment(context: context, order: 5, activity: wout5),
+            createAssignment(context: context, order: 6, activity: wout6)
+        ])
+        
         try! context.save()
         presentationMode.wrappedValue.dismiss()
     }
-}
-
-struct CreateExcerciseView_Previews: PreviewProvider {
-    static var previews: some View {
-        CreateExcerciseView()
+    
+    private func createAssignment(context: NSManagedObjectContext, order: Int16, activity: Activity) -> Assignment {
+        let assignment = Assignment(context: context)
+        assignment.order = order
+        assignment.activity = activity
+        return assignment
     }
 }

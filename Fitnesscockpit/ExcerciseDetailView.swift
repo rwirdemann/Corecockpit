@@ -15,27 +15,27 @@ struct ExcerciseDetailView: View {
             Text(excercise.when!, formatter: itemFormatter)
             Section(header: Text("Warmup")) {
                 List {
-                    ForEach(excercise.warmups.array(of: Activity.self)) { w in
+                    ForEach(excercise.assignments.array(filter: Constants.WARMUP)) { a in
                         HStack {
-                            Text("\(w.name!)")
+                            Text("\(a.activity!.name!)")
                             Spacer()
-                            Text("\(w.repititions!)")
+                            Text("\(a.activity!.repititions!)")
                         }
                     }
                 }
             }
             Section(header: Text("Workout")) {
                 List {
-                    ForEach(excercise.workouts.array(of: Activity.self)) { w in
+                    ForEach(excercise.assignments.array(filter: Constants.WORKOUT)) { a in
                         VStack(alignment: .leading) {
                             HStack {
-                                Text("\(w.name!)")
+                                Text("\(a.activity!.name!)")
                                 Spacer()
-                                Text("\(w.repititions!)")
+                                Text("\(a.activity!.repititions!)")
                             }
-                            Text(w.rubber!)
+                            Text(a.activity!.rubber!)
                                 .font(.footnote)
-                                .foregroundColor(toColor(rubber: w.rubber!))
+                                .foregroundColor(toColor(rubber: a.activity!.rubber!))
                         }
                     }
                 }
@@ -52,11 +52,16 @@ struct ExcerciseDetailView: View {
 }
 
 extension Optional where Wrapped == NSSet {
-    func array<T: Hashable>(of: T.Type) -> [T] {
-        if let set = self as? Set<T> {
-            return Array(set)
+    func array(filter: String) -> [Assignment] {
+        if let set = self as? Set<Assignment> {
+            let a = Array(set)
+            let filtered =  a.filter { w in
+                return w.activity!.phase == filter
+            }
+            let sorted = filtered.sorted(by: { $0.order <= $1.order })
+            return sorted
         }
-        return [T]()
+        return [Assignment]()
     }
 }
 

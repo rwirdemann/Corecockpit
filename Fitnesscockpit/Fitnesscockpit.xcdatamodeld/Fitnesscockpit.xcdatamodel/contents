@@ -7,12 +7,15 @@
         <attribute name="phase" optional="YES" attributeType="String"/>
         <attribute name="repititions" optional="YES" attributeType="String"/>
         <attribute name="rubber" optional="YES" attributeType="String"/>
-        <relationship name="warmup" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Excercise" inverseName="warmups" inverseEntity="Excercise"/>
-        <relationship name="workout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Excercise" inverseName="workouts" inverseEntity="Excercise"/>
+        <relationship name="assignment" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Assignment" inverseName="activity" inverseEntity="Assignment"/>
+    </entity>
+    <entity name="Assignment" representedClassName="Assignment" syncable="YES" codeGenerationType="class">
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="assignment" inverseEntity="Activity"/>
+        <relationship name="excercise" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Excercise" inverseName="assignments" inverseEntity="Excercise"/>
     </entity>
     <entity name="Excercise" representedClassName="Excercise" syncable="YES" codeGenerationType="class">
         <attribute name="when" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <relationship name="warmups" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activity" inverseName="warmup" inverseEntity="Activity"/>
-        <relationship name="workouts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activity" inverseName="workout" inverseEntity="Activity"/>
+        <relationship name="assignments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Assignment" inverseName="excercise" inverseEntity="Assignment"/>
     </entity>
 </model>
