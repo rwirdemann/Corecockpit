@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct ExcerciseDetailView: View {
+    @Environment(\.managedObjectContext) private var context
+    @Environment(\.presentationMode) var presentationMode
     let excercise: Excercise
     
     var body: some View {
         Form {
-            Text(excercise.when!, formatter: itemFormatter)
+            HStack {
+                Text(excercise.when!, formatter: itemFormatter)
+                Spacer()
+                Button("Complete", action: complete)
+                    .disabled(excercise.complete)
+            }
             Section(header: Text("Warmup")) {
                 List {
                     ForEach(excercise.assignments.array(filter: Constants.WARMUP)) { a in
@@ -41,6 +48,12 @@ struct ExcerciseDetailView: View {
                 }
             }
         }
+    }
+    
+    private func complete() {
+        self.excercise.complete = true
+        try! context.save()
+        presentationMode.wrappedValue.dismiss()
     }
     
     private func toColor(rubber: String) -> Color? {
