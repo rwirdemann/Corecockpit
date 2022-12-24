@@ -40,8 +40,8 @@ struct CreateExcerciseView: View {
             Text("Select").tag("nil as Int?")
             
             ForEach(activities) { activity in
-                Text(activity.name!)
-                    .tag(Optional(activity))
+                Text("\(activity.name!) (\(activity.executions))")
+                .tag(Optional(activity))
             }
         }
         .labelsHidden()

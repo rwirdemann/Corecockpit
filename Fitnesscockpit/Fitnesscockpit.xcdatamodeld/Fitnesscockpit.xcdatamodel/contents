@@ -3,6 +3,7 @@
     <entity name="Activity" representedClassName="Activity" syncable="YES" codeGenerationType="class">
         <attribute name="bodyPart" optional="YES" attributeType="String"/>
         <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="executions" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="phase" optional="YES" attributeType="String"/>
         <attribute name="repititions" optional="YES" attributeType="String"/>

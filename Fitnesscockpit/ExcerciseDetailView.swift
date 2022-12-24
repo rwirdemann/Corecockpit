@@ -51,7 +51,10 @@ struct ExcerciseDetailView: View {
     }
     
     private func complete() {
-        self.excercise.complete = true
+        for a in excercise.assignments.array() {
+            a.activity?.executions += 1
+        }
+        excercise.complete = true
         try! context.save()
         presentationMode.wrappedValue.dismiss()
     }
@@ -65,14 +68,16 @@ struct ExcerciseDetailView: View {
 }
 
 extension Optional where Wrapped == NSSet {
-    func array(filter: String) -> [Assignment] {
+    func array(filter: String = "") -> [Assignment] {
         if let set = self as? Set<Assignment> {
             let a = Array(set)
-            let filtered =  a.filter { w in
-                return w.activity!.phase == filter
+            if filter != "" {
+                let filtered =  a.filter { w in
+                    return w.activity!.phase == filter
+                }
+                return filtered.sorted(by: { $0.order <= $1.order })
             }
-            let sorted = filtered.sorted(by: { $0.order <= $1.order })
-            return sorted
+            return a.sorted(by: { $0.order <= $1.order })
         }
         return [Assignment]()
     }
