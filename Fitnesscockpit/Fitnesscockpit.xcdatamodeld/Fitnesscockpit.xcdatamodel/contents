@@ -16,7 +16,7 @@
         <relationship name="excercise" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Excercise" inverseName="assignments" inverseEntity="Excercise"/>
     </entity>
     <entity name="Excercise" representedClassName="Excercise" syncable="YES" codeGenerationType="class">
-        <attribute name="complete" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="complete" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="when" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="assignments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Assignment" inverseName="excercise" inverseEntity="Assignment"/>
     </entity>

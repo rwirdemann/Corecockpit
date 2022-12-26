@@ -25,6 +25,7 @@ struct ExcercisesView: View {
                     } label: {
                         Text(item.when!, formatter: itemFormatter)
                     }
+                    .foregroundColor(item.complete ? .secondary : .primary)
                 }
                 .onDelete(perform: deleteItems)
             }
