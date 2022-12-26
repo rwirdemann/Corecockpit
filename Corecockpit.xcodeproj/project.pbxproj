@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF097883294E17F9006B3FC7 /* FitnesscockpitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF097882294E17F9006B3FC7 /* FitnesscockpitApp.swift */; };
+		BF097883294E17F9006B3FC7 /* CorecockpitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF097882294E17F9006B3FC7 /* CorecockpitApp.swift */; };
 		BF097885294E17F9006B3FC7 /* ActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF097884294E17F9006B3FC7 /* ActivitiesView.swift */; };
 		BF097887294E17FB006B3FC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF097886294E17FB006B3FC7 /* Assets.xcassets */; };
 		BF09788A294E17FB006B3FC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF097889294E17FB006B3FC7 /* Preview Assets.xcassets */; };
@@ -23,8 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BF09787F294E17F9006B3FC7 /* Fitnesscockpit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitnesscockpit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF097882294E17F9006B3FC7 /* FitnesscockpitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnesscockpitApp.swift; sourceTree = "<group>"; };
+		BF09787F294E17F9006B3FC7 /* Corecockpit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Corecockpit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF097882294E17F9006B3FC7 /* CorecockpitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorecockpitApp.swift; sourceTree = "<group>"; };
 		BF097884294E17F9006B3FC7 /* ActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
 		BF097886294E17FB006B3FC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF097889294E17FB006B3FC7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 		BF097876294E17F9006B3FC7 = {
 			isa = PBXGroup;
 			children = (
-				BF097881294E17F9006B3FC7 /* Fitnesscockpit */,
+				BF097881294E17F9006B3FC7 /* Corecockpit */,
 				BF097880294E17F9006B3FC7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,16 +61,16 @@
 		BF097880294E17F9006B3FC7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BF09787F294E17F9006B3FC7 /* Fitnesscockpit.app */,
+				BF09787F294E17F9006B3FC7 /* Corecockpit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BF097881294E17F9006B3FC7 /* Fitnesscockpit */ = {
+		BF097881294E17F9006B3FC7 /* Corecockpit */ = {
 			isa = PBXGroup;
 			children = (
 				BF1AA9E0294F9561008BC2AB /* ExcercisesView.swift */,
-				BF097882294E17F9006B3FC7 /* FitnesscockpitApp.swift */,
+				BF097882294E17F9006B3FC7 /* CorecockpitApp.swift */,
 				BF097884294E17F9006B3FC7 /* ActivitiesView.swift */,
 				BF097886294E17FB006B3FC7 /* Assets.xcassets */,
 				BF09788B294E17FB006B3FC7 /* Persistence.swift */,
@@ -83,7 +83,7 @@
 				BF671174294FC0E20037A633 /* CreateExcerciseView.swift */,
 				BF5A6C1D295058DC00199565 /* ExcerciseDetailView.swift */,
 			);
-			path = Fitnesscockpit;
+			path = Corecockpit;
 			sourceTree = "<group>";
 		};
 		BF097888294E17FB006B3FC7 /* Preview Content */ = {
@@ -97,9 +97,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BF09787E294E17F9006B3FC7 /* Fitnesscockpit */ = {
+		BF09787E294E17F9006B3FC7 /* Corecockpit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF097892294E17FB006B3FC7 /* Build configuration list for PBXNativeTarget "Fitnesscockpit" */;
+			buildConfigurationList = BF097892294E17FB006B3FC7 /* Build configuration list for PBXNativeTarget "Corecockpit" */;
 			buildPhases = (
 				BF09787B294E17F9006B3FC7 /* Sources */,
 				BF09787C294E17F9006B3FC7 /* Frameworks */,
@@ -109,9 +109,9 @@
 			);
 			dependencies = (
 			);
-			name = Fitnesscockpit;
+			name = Corecockpit;
 			productName = Fitnesscockpit;
-			productReference = BF09787F294E17F9006B3FC7 /* Fitnesscockpit.app */;
+			productReference = BF09787F294E17F9006B3FC7 /* Corecockpit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -129,7 +129,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BF09787A294E17F9006B3FC7 /* Build configuration list for PBXProject "Fitnesscockpit" */;
+			buildConfigurationList = BF09787A294E17F9006B3FC7 /* Build configuration list for PBXProject "Corecockpit" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -142,7 +142,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BF09787E294E17F9006B3FC7 /* Fitnesscockpit */,
+				BF09787E294E17F9006B3FC7 /* Corecockpit */,
 			);
 		};
 /* End PBXProject section */
@@ -172,7 +172,7 @@
 				BF097885294E17F9006B3FC7 /* ActivitiesView.swift in Sources */,
 				BF1AA9E1294F9561008BC2AB /* ExcercisesView.swift in Sources */,
 				BF1AA9DD294F4C13008BC2AB /* Constants.swift in Sources */,
-				BF097883294E17F9006B3FC7 /* FitnesscockpitApp.swift in Sources */,
+				BF097883294E17F9006B3FC7 /* CorecockpitApp.swift in Sources */,
 				BF5A6C1E295058DC00199565 /* ExcerciseDetailView.swift in Sources */,
 				BF097898294E1C9C006B3FC7 /* ActivityDetailView.swift in Sources */,
 			);
@@ -302,7 +302,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Fitnesscockpit/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Corecockpit/Preview Content\"";
 				DEVELOPMENT_TEAM = 8LW873B8B4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -332,7 +332,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Fitnesscockpit/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Corecockpit/Preview Content\"";
 				DEVELOPMENT_TEAM = 8LW873B8B4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -358,7 +358,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BF09787A294E17F9006B3FC7 /* Build configuration list for PBXProject "Fitnesscockpit" */ = {
+		BF09787A294E17F9006B3FC7 /* Build configuration list for PBXProject "Corecockpit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF097890294E17FB006B3FC7 /* Debug */,
@@ -367,7 +367,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF097892294E17FB006B3FC7 /* Build configuration list for PBXNativeTarget "Fitnesscockpit" */ = {
+		BF097892294E17FB006B3FC7 /* Build configuration list for PBXNativeTarget "Corecockpit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF097893294E17FB006B3FC7 /* Debug */,
