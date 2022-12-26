@@ -17,8 +17,7 @@ struct ExcerciseDetailView: View {
             HStack {
                 Text(excercise.when!, formatter: itemFormatter)
                 Spacer()
-                Button("Complete", action: complete)
-                    .disabled(excercise.complete)
+                Button(excercise.complete ? "Do Again" : "Complete", action: toggleComplete)
             }
             Section(header: Text("Warmup")) {
                 List {
@@ -49,16 +48,40 @@ struct ExcerciseDetailView: View {
             }
         }
     }
-    
+
+    private func toggleComplete() {
+        if excercise.complete {
+            copy()
+        } else {
+            complete()
+        }
+    }
+
     private func complete() {
         for a in excercise.assignments.array() {
             a.activity?.executions += 1
         }
         excercise.complete = true
+        excercise.when = Date()
         try! context.save()
         presentationMode.wrappedValue.dismiss()
     }
-    
+
+    private func copy() {
+        let newExcercice = Excercise(context: context)
+        for a in excercise.assignments.array() {
+            let newAssignment = Assignment(context: context)
+            newAssignment.activity = a.activity
+            newAssignment.excercise = newExcercice
+            newAssignment.order = a.order
+            newExcercice.addToAssignments(newAssignment)
+        }
+        newExcercice.complete = false
+        newExcercice.when = Date()
+        try! context.save()
+        presentationMode.wrappedValue.dismiss()
+    }
+
     private func toColor(rubber: String) -> Color? {
         if rubber == "yellow" {
             return .yellow

@@ -23,7 +23,7 @@ struct ExcercisesView: View {
                     NavigationLink {
                         ExcerciseDetailView(excercise: item)
                     } label: {
-                        Text(item.when!, formatter: itemFormatter)
+                        Text(item.when ?? Date(), formatter: itemFormatter)
                     }
                     .foregroundColor(item.complete ? .secondary : .primary)
                 }
