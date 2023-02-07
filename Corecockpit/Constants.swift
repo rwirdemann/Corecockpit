@@ -33,10 +33,10 @@ struct Constants {
     static let RUBBER_NONE = "none"
     static let RUBBER_RED = "red"
     static let RUBBER_YELLOW = "yellow"
-    static let RUBBER_RED_BLACK = "red / black"
+    static let RUBBER_BLACK_RED = "black / red"
+    static let RUBBER_BLACK_YELLOW = "black / yellow"
+    static let RUBBER_BLACK_BLUE = "black / blue"
     static let RUBBER_GREEN = "green"
     static let RUBBER = [RUBBER_NONE, RUBBER_YELLOW, RUBBER_RED, "blue",
-                         RUBBER_GREEN, "black", RUBBER_RED_BLACK]
-    
-    
+                         RUBBER_GREEN, "black", RUBBER_BLACK_RED, RUBBER_BLACK_YELLOW, RUBBER_BLACK_BLUE]
 }

@@ -47,6 +47,7 @@ struct ExcerciseDetailView: View {
                 }
             }
         }
+        .navigationBarTitle("Excercise")
     }
 
     private func toggleComplete() {

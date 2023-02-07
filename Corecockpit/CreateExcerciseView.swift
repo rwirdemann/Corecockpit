@@ -40,10 +40,11 @@ struct CreateExcerciseView: View {
             Text("Select").tag("nil as Int?")
             
             ForEach(activities) { activity in
-                Text("\(activity.name!) (\(activity.executions))")
+                Text("\(activity.name!)")
                 .tag(Optional(activity))
             }
         }
+        .pickerStyle(.menu)
         .labelsHidden()
     }
     
@@ -75,6 +76,7 @@ struct CreateExcerciseView: View {
                 Button("Save", action : save)
             }
         }
+        .navigationTitle("New Excercise")
     }
     
     private func save() {

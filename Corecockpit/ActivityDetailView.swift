@@ -14,7 +14,6 @@ struct ActivityDetailView: View {
     @ObservedObject var activity: Activity
     
     var body: some View {
-        NavigationView {
             Form {
                 if let name = Binding<String>($activity.name) {
                     TextField("Name", text: name)
@@ -51,7 +50,6 @@ struct ActivityDetailView: View {
                     TextEditor(text: desc)
                 }
 
-            }
         }
         .toolbar{
             ToolbarItemGroup(placement: .navigationBarTrailing) {
@@ -61,5 +59,6 @@ struct ActivityDetailView: View {
                 }
             }
         }
+        .navigationTitle("Activity")
     }
 }

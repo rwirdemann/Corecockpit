@@ -122,28 +122,28 @@ struct PersistenceController {
         populateDatabase(context: container.viewContext,
                          name: "Rudern Tube Untergriff", phase: "Workout",
                          repititions: Constants.REPITITIONS_TWELVE_TWELVE,
-                         rubber: Constants.RUBBER_RED_BLACK,
+                         rubber: Constants.RUBBER_BLACK_RED,
                          bodyPart: Constants.CORE,
                          desc: ""
         )
         populateDatabase(context: container.viewContext,
                          name: "Rudern Tube Obergriff", phase: "Workout",
                          repititions: Constants.REPITITIONS_TWELVE_TWELVE,
-                         rubber: Constants.RUBBER_RED_BLACK,
+                         rubber: Constants.RUBBER_BLACK_RED,
                          bodyPart: Constants.CORE,
                          desc: ""
         )
         populateDatabase(context: container.viewContext,
                          name: "Rudern Tube Hammergriff", phase: "Workout",
                          repititions: Constants.REPITITIONS_TWELVE_TWELVE,
-                         rubber: Constants.RUBBER_RED_BLACK,
+                         rubber: Constants.RUBBER_BLACK_RED,
                          bodyPart: Constants.CORE,
                          desc: ""
         )
         populateDatabase(context: container.viewContext,
                          name: "Buttefly Tube", phase: "Workout",
                          repititions: Constants.REPITITIONS_TWELVE_TWELVE,
-                         rubber: Constants.RUBBER_RED_BLACK,
+                         rubber: Constants.RUBBER_BLACK_RED,
                          bodyPart: Constants.UPPER_BODY,
                          desc: ""
         )
@@ -206,7 +206,7 @@ struct PersistenceController {
         populateDatabase(context: container.viewContext,
                          name: "Bankdrücken Tube", phase: "Workout",
                          repititions: Constants.REPITITIONS_TWELVE_TWELVE,
-                         rubber: Constants.RUBBER_RED_BLACK,
+                         rubber: Constants.RUBBER_BLACK_RED,
                          bodyPart: Constants.UPPER_BODY,
                          desc: ""
         )
