@@ -48,6 +48,16 @@ struct CreateExcerciseView: View {
         .labelsHidden()
     }
     
+    fileprivate func activitySelector(activity: Binding<Activity?>) -> HStack<_ConditionalContent<NavigationLink<Text, SelectActivityView>, NavigationLink<Text, SelectActivityView>>> {
+        return HStack {
+            if let name = activity.wrappedValue?.name {
+                NavigationLink(name, destination: SelectActivityView(selectedActivity: activity))
+            } else {
+                NavigationLink("Select", destination: SelectActivityView(selectedActivity: activity))
+            }
+        }
+    }
+    
     var body: some View {
         Form {
             HStack {
@@ -58,9 +68,9 @@ struct CreateExcerciseView: View {
             }
 
             Section(header: Text("Warmup")) {
-                activityPicker(activity: $warmup1, activities: warmups)
-                activityPicker(activity: $warmup2, activities: warmups)
-                activityPicker(activity: $warmup3, activities: warmups)
+                activitySelector(activity: $warmup1)
+                activitySelector(activity: $warmup2)
+                activitySelector(activity: $warmup3)
             }
             Section(header: Text("Workout")) {
                 activityPicker(activity: $workout1, activities: workouts)

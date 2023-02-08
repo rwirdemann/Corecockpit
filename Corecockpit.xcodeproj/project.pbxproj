@@ -20,6 +20,7 @@
 		BF1AA9E1294F9561008BC2AB /* ExcercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1AA9E0294F9561008BC2AB /* ExcercisesView.swift */; };
 		BF5A6C1E295058DC00199565 /* ExcerciseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A6C1D295058DC00199565 /* ExcerciseDetailView.swift */; };
 		BF671175294FC0E20037A633 /* CreateExcerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF671174294FC0E20037A633 /* CreateExcerciseView.swift */; };
+		BFC0B3FE2992E0E200B01B61 /* SelectActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC0B3FD2992E0E200B01B61 /* SelectActivityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		BF1AA9E0294F9561008BC2AB /* ExcercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcercisesView.swift; sourceTree = "<group>"; };
 		BF5A6C1D295058DC00199565 /* ExcerciseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseDetailView.swift; sourceTree = "<group>"; };
 		BF671174294FC0E20037A633 /* CreateExcerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateExcerciseView.swift; sourceTree = "<group>"; };
+		BFC0B3FD2992E0E200B01B61 /* SelectActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectActivityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		BF097881294E17F9006B3FC7 /* Corecockpit */ = {
 			isa = PBXGroup;
 			children = (
+				BFC0B3FD2992E0E200B01B61 /* SelectActivityView.swift */,
 				BF1AA9E0294F9561008BC2AB /* ExcercisesView.swift */,
 				BF097882294E17F9006B3FC7 /* CorecockpitApp.swift */,
 				BF097884294E17F9006B3FC7 /* ActivitiesView.swift */,
@@ -171,6 +174,7 @@
 				BF097896294E19D9006B3FC7 /* CreateActivityView.swift in Sources */,
 				BF097885294E17F9006B3FC7 /* ActivitiesView.swift in Sources */,
 				BF1AA9E1294F9561008BC2AB /* ExcercisesView.swift in Sources */,
+				BFC0B3FE2992E0E200B01B61 /* SelectActivityView.swift in Sources */,
 				BF1AA9DD294F4C13008BC2AB /* Constants.swift in Sources */,
 				BF097883294E17F9006B3FC7 /* CorecockpitApp.swift in Sources */,
 				BF5A6C1E295058DC00199565 /* ExcerciseDetailView.swift in Sources */,
