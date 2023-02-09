@@ -39,9 +39,7 @@ struct ExcerciseDetailView: View {
                                 Spacer()
                                 Text("\(a.activity!.repititions!)")
                             }
-                            Text(a.activity!.rubber!)
-                                .font(.footnote)
-                                .foregroundColor(toColor(rubber: a.activity!.rubber!))
+                            RubberView(rubber: a.activity!.rubber!)
                         }
                     }
                 }
@@ -82,13 +80,6 @@ struct ExcerciseDetailView: View {
         try! context.save()
         presentationMode.wrappedValue.dismiss()
     }
-
-    private func toColor(rubber: String) -> Color? {
-        if rubber == "yellow" {
-            return .yellow
-        }
-        return .primary
-    }
 }
 
 extension Optional where Wrapped == NSSet {
@@ -97,7 +88,7 @@ extension Optional where Wrapped == NSSet {
             let a = Array(set)
             if filter != "" {
                 let filtered =  a.filter { w in
-                    return w.activity!.phase == filter
+                      return w.activity!.phase == filter
                 }
                 return filtered.sorted(by: { $0.order <= $1.order })
             }

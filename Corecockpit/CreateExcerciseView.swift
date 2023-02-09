@@ -35,25 +35,12 @@ struct CreateExcerciseView: View {
     @State private var workout5: Activity?
     @State private var workout6: Activity?
 
-    fileprivate func activityPicker(activity: Binding<Activity?>, activities: FetchedResults<Activity>) -> some View {
-        return Picker("Activity", selection: activity) {
-            Text("Select").tag("nil as Int?")
-            
-            ForEach(activities) { activity in
-                Text("\(activity.name!)")
-                .tag(Optional(activity))
-            }
-        }
-        .pickerStyle(.menu)
-        .labelsHidden()
-    }
-    
-    fileprivate func activitySelector(activity: Binding<Activity?>) -> HStack<_ConditionalContent<NavigationLink<Text, SelectActivityView>, NavigationLink<Text, SelectActivityView>>> {
+    fileprivate func activitySelector(activity: Binding<Activity?>, selectWarmups: Bool) -> HStack<_ConditionalContent<NavigationLink<Text, SelectActivityView>, NavigationLink<Text, SelectActivityView>>> {
         return HStack {
             if let name = activity.wrappedValue?.name {
-                NavigationLink(name, destination: SelectActivityView(selectedActivity: activity))
+                NavigationLink(name, destination: SelectActivityView(selectedActivity: activity, selectWarmups: selectWarmups))
             } else {
-                NavigationLink("Select", destination: SelectActivityView(selectedActivity: activity))
+                NavigationLink("Select", destination: SelectActivityView(selectedActivity: activity, selectWarmups: selectWarmups))
             }
         }
     }
@@ -68,25 +55,36 @@ struct CreateExcerciseView: View {
             }
 
             Section(header: Text("Warmup")) {
-                activitySelector(activity: $warmup1)
-                activitySelector(activity: $warmup2)
-                activitySelector(activity: $warmup3)
+                activitySelector(activity: $warmup1, selectWarmups: true)
+                activitySelector(activity: $warmup2, selectWarmups: true)
+                activitySelector(activity: $warmup3, selectWarmups: true)
             }
             Section(header: Text("Workout")) {
-                activityPicker(activity: $workout1, activities: workouts)
-                activityPicker(activity: $workout2, activities: workouts)
-                activityPicker(activity: $workout3, activities: workouts)
-                activityPicker(activity: $workout4, activities: workouts)
-                activityPicker(activity: $workout5, activities: workouts)
-                activityPicker(activity: $workout6, activities: workouts)
+                activitySelector(activity: $workout1, selectWarmups: false)
+                activitySelector(activity: $workout2, selectWarmups: false)
+                activitySelector(activity: $workout3, selectWarmups: false)
+                activitySelector(activity: $workout4, selectWarmups: false)
+                activitySelector(activity: $workout5, selectWarmups: false)
+                activitySelector(activity: $workout6, selectWarmups: false)
             }
         }
         .toolbar{
             ToolbarItemGroup(placement: .navigationBarTrailing) {
                 Button("Save", action : save)
+                    .disabled(!allActivtiesSelected())
             }
         }
         .navigationTitle("New Excercise")
+    }
+    
+    private func allActivtiesSelected() -> Bool {
+        let activities = [warmup1, warmup2, warmup3, workout1, workout2, workout3, workout4, workout5, workout6]
+        for a in activities {
+            if a == nil {
+                return false
+            }
+        }
+        return true
     }
     
     private func save() {

@@ -16,21 +16,34 @@ struct SelectActivityView: View {
         predicate: NSPredicate(format: "phase == 'Warmup'"),
         animation: .default)
     private var warmups: FetchedResults<Activity>
-    
+
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Activity.name, ascending: true)],
+        predicate: NSPredicate(format: "phase == 'Workout'"),
+        animation: .default)
+    private var workouts: FetchedResults<Activity>
+
     @Environment(\.dismiss) var dismiss
 
     @Binding var selectedActivity: Activity?
     
+    var selectWarmups: Bool
+    
     var body: some View {
         List {
-            ForEach(warmups) { item in
+            let activities = selectWarmups ? warmups : workouts
+            ForEach(activities) { item in
                 VStack(alignment: .leading, spacing: 5) {
                     Text("\(item.name!) (\(item.repititions ?? ""))")
                         .fontWeight(.semibold)
                         .foregroundColor(.primary)
-                    Text("\(item.phase!) - \(item.bodyPart!)")
-                        .font(.footnote)
-                        .foregroundColor(.secondary)
+                    HStack {
+                        Text("\(item.bodyPart!)")
+                            .font(.footnote)
+                            .foregroundColor(.secondary)
+                        Spacer()
+                        RubberView(rubber: item.rubber!)
+                    }
                 }
                 .onTapGesture {
                     self.selectedActivity = item
@@ -38,5 +51,6 @@ struct SelectActivityView: View {
                 }
             }
         }
+        .navigationBarTitle(selectWarmups ? "Select Warmup" : "Select Workout")
     }
 }

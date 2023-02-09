@@ -52,9 +52,12 @@ struct ActivitiesView: View {
                                 Text("\(item.name!) (\(item.repititions ?? ""))")
                                     .fontWeight(.semibold)
                                     .foregroundColor(.primary)
-                                Text("\(item.phase!) - \(item.bodyPart!)")
-                                    .font(.footnote)
-                                    .foregroundColor(.secondary)
+                                HStack {
+                                    Text("\(item.phase!) - \(item.bodyPart!)")
+                                        .font(.footnote)
+                                        .foregroundColor(.secondary)
+                                    RubberView(rubber: item.rubber!)
+                                }
                             }
                         }
                     }
